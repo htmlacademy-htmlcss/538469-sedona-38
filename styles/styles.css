@@ -21,13 +21,12 @@
   box-sizing: border-box;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-  object-fit: contain;
+html {
+  height: 100%;
 }
 
 body {
+  height: 100%;
   margin: 0;
   font-family: "PT Sans", "Arial", sans-serif;
   font-size: 18px;
@@ -35,7 +34,41 @@ body {
   font-weight: 400;
   line-height: 21px;
   color: #000000;
+  background-color: #F2F2F2;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  width: 1200px;
+  margin: 0 auto;
+  color: #000000;
   background-color: #ffffff;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 70px;
+}
+
+.navigation-list {
+  width: 520px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.navigation-user {
+  width: 268px;
 }
 
 .navigation-link {
@@ -56,14 +89,25 @@ body {
   background-color: #756157;
 }
 
+.main-index {
+  flex-grow: 1;
+}
+
 .hero {
-  text-align: center;
-  background-color: #000000;
+  background-color: #7F8A96;
   background-image: url("../images/background-index.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-img {
+  display: block;
+  margin: 0 auto;
 }
 
 .advantages-heading {
+  margin: 0;
   color: #000000;
   text-align: center;
   font-size: 30px;
@@ -73,13 +117,32 @@ body {
 }
 
 .advantages-desc {
+  margin: 0;
   color: #333333;
   text-align: center;
   font-size: 22px;
   line-height: 26px;
 }
 
-.advantages-item-wide {
+.advantages-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.advantages-item {
+  width: 400px;
+}
+
+.advantages-item:nth-child(odd) {
+  background-color: rgba(131, 179, 211, 0.20);
+}
+
+.advantages-item.advantages-item-wide {
+  display: flex;
+  width: 1200px;
   color: #ffffff;
   background-color: #82B3D3;
 }
@@ -93,10 +156,12 @@ body {
 }
 
 .advantages-text {
+  margin: 0;
   text-align: center;
 }
 
 .services-heading {
+  margin: 0;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
@@ -104,7 +169,15 @@ body {
   text-transform: uppercase;
 }
 
+.services-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .services-desc {
+  margin: 0;
   color: #333333;
   text-align: center;
   font-size: 22px;
@@ -112,6 +185,7 @@ body {
 }
 
 .service-title {
+  margin: 0;
   text-align: center;
   font-size: 24px;
   font-weight: 700;
@@ -120,11 +194,13 @@ body {
 }
 
 .service-text {
+  margin: 0;
   color: #333333;
   text-align: center;
 }
 
 .find-hotel-heading {
+  margin: 0;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
@@ -133,6 +209,7 @@ body {
 }
 
 .find-hotel-desc {
+  margin: 0;
   color: #333333;
   text-align: center;
   font-size: 22px;
@@ -145,12 +222,15 @@ body {
 
 .subscription {
   color: #ffffff;
-  background-color: #000000;
+  background-color: #7F8A96;
   background-image: url("../images/background-index-subscribe.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .subscription-heading {
+  margin: 0;
   text-align: center;
   font-size: 30px;
   font-weight: 700;
@@ -159,14 +239,35 @@ body {
 }
 
 .subscription-desc {
+  margin: 0;
   text-align: center;
   font-size: 22px;
   line-height: 26px;
 }
 
+.subscription-form-field {
+  color: #000000;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+}
+
 .subscription-form-button {
   background-color: #82B3D3;
   border: none;
+}
+
+.page-footer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer-social-list {
+  display: flex;
+  width: 142px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .footer-contacts {
@@ -182,17 +283,29 @@ body {
   text-decoration: none;
 }
 
+/* Каталог гостиниц Седоны */
+
 .hotel-search {
   color: #ffffff;
-  background-color: #000000;
+  background-color: #7F8A96;
   background-image: url("../images/background-catalog.jpg");
   background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
 .hotel-search-heading {
+  margin: 0;
   font-size: 60px;
   font-weight: 700;
   line-height: 78px;
+}
+
+.breadcrumbs-list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
 }
 
 .breadcrumbs-link {
@@ -201,7 +314,12 @@ body {
   font-size: 16px;
 }
 
+.hotel-search-form {
+  display: flex;
+}
+
 .infrastructure {
+  width: 150px;
   border: none;
   margin: 0;
 }
@@ -213,6 +331,7 @@ body {
 }
 
 .infrastructure-field {
+  margin: 0;
   line-height: 23px;
 }
 
@@ -228,21 +347,51 @@ body {
 }
 
 .type-house-field {
+  margin: 0;
   font-size: 18px;
   line-height: 23px;
 }
 
 .price-title {
+  margin: 0;
   font-size: 20px;
   font-weight: 700;
   line-height: 24px;
 }
 
+.price-min-input,
+.price-max-input {
+  color: #000000;
+  font-family: "PT Sans", "Arial", sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+}
+
+.hotel-search-form-buttons {
+  margin: 0;
+}
+
+.form-buttons-apply,
+.form-buttons-reset {
+  margin: 0;
+  padding: 0;
+  border: none;
+}
+
+
 .form-buttons-apply {
   background-color: #82B3D3;
 }
 
+.catalog-sorting {
+  display: flex;
+  align-items: flex-start;
+}
+
 .catalog-sorting-heading {
+  margin: 0;
+  margin-right: 200px;
   font-size: 30px;
   font-weight: 700;
   line-height: 36px;
@@ -250,9 +399,34 @@ body {
 }
 
 .catalog-sorting-dropdown {
+  margin-right: 70px;
   color: #333;
   font-size: 18px;
   line-height: 21px;
+}
+
+.catalog-sorting-buttons {
+  width: 160px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.cards-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.card-item {
+  width: 300px;
+  margin-right: 20px;
+}
+
+.card-item:last-child {
+  margin-right: 0;
 }
 
 .card-item-link {
@@ -296,7 +470,17 @@ body {
   text-transform: uppercase;
 }
 
+.pagination-list {
+  display: flex;
+  flex-wrap: wrap;
+  width: 420px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .pagination-item {
+  margin-right: 8px;
   width: 60px;
   height: 60px;
   border-radius: 4px;
@@ -313,7 +497,11 @@ body {
   line-height: 36px;
 }
 
-.pagination-link-current {
+.pagination-item-current {
+  background-color: #f2f2f2;
+}
+
+.pagination-item-current .pagination-link {
   color: #000000;
 }
 
