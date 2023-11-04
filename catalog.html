@@ -10,7 +10,7 @@
 
   <body>
     <div class="container">
-      <header class="page-header">
+      <header class="page-header" data-test="header">
         <nav class="navigation">
           <a class="navigation-logo-link" href="index.html">
             <img class="navigation-logo-img" src="images/svg/logo-sedona.svg" alt="Логотип Седона" width="140"
@@ -53,7 +53,7 @@
         </nav>
       </header>
 
-      <main class="main-inner">
+      <main class="main-inner" data-test="main">
         <h1 class="visually-hidden">Каталог гостиниц Седоны</h1>
         <section class="hotel-search">
           <h2 class="hotel-search-heading">Гостиницы Седоны</h2>
@@ -67,7 +67,7 @@
               <a href="#" class="breadcrumbs-link">Гостиницы</a>
             </li>
           </ul>
-          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="post">
+          <form class="hotel-search-form" action="https://echo.htmlacademy.ru/" method="post" data-test="filter">
             <fieldset class="infrastructure">
               <legend class="infrastructure-heading">Инфраструктура:</legend>
               <p class="infrastructure-field">
@@ -86,15 +86,15 @@
             <fieldset class="type-house">
               <legend class="type-house-heading">Тип Жилья:</legend>
               <p class="type-house-field">
-                <input class="type-house-field-input" type="radio" name="type-house" id="type-house-hotel" checked>
+                <input class="type-house-field-input" type="radio" name="type-house" id="type-house-hotel" value="hotel" checked>
                 <label class="type-house-field-label" for="type-house-hotel">Гостиница</label>
               </p>
               <p class="type-house-field">
-                <input class="type-house-field-input" type="radio" name="type-house" id="type-house-motel">
+                <input class="type-house-field-input" type="radio" name="type-house" id="type-house-motel" value="motel">
                 <label class="type-house-field-label" for="type-house-motel">Мотель</label>
               </p>
               <p class="type-house-field">
-                <input class="type-house-field-input" type="radio" name="type-house" id="type-house-apartments">
+                <input class="type-house-field-input" type="radio" name="type-house" id="type-house-apartments" value="apartments">
                 <label class="type-house-field-label" for="type-house-apartments">Апартаменты</label>
               </p>
             </fieldset>
@@ -108,9 +108,21 @@
                 <label class="price-label price-label-max" for="price-max">до</label>
                 <input class="price-input price-input-max" type="text" name="price-max" id="price-max" placeholder="9000" value="9000">
               </div>
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0; width: 226px">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену</span>
+                    </button>
+                  </div>
+                </div>
+              </div>
             </div>
             <p class="hotel-search-buttons form-buttons">
-              <button class="form-buttons-apply button" type="button">
+              <button class="form-buttons-apply button" type="submit">
                 Применить
               </button>
               <button class="form-buttons-reset button" type="reset">
@@ -119,7 +131,7 @@
             </p>
           </form>
         </section>
-        <section class="catalog-sorting">
+        <section class="catalog-sorting" data-test="catalog">
           <h2 class="catalog-sorting-heading">Найдено гостиниц: 38</h2>
           <select class="catalog-sorting-dropdown" name="catalog-sorting-dropdown">
             <option value="ascending">Сначала дешёвые</option>
@@ -144,7 +156,7 @@
             </li>
           </ul>
         </section>
-        <section class="cards">
+        <section class="cards" data-test="catalog">
           <h2 class="visually-hidden">Карточки с гостиницами</h2>
           <ul class="cards-list">
             <li class="card-item">
@@ -160,10 +172,6 @@
               <button class="button button-favorite" type="button">В избранное</button>
               <p class="card-item-stars stars-4">
                 <span class="visually-hidden">4 звезды</span>
-                <span class="card-item-star"></span>
-                <span class="card-item-star"></span>
-                <span class="card-item-star"></span>
-                <span class="card-item-star"></span>
               </p>
               <p class="card-item-rating-info">Рейтинг: 8,5</p>
             </li>
@@ -181,10 +189,6 @@
               <button class="button button-favorite-in" type="button">В избранном</button>
               <p class="card-item-stars stars-4">
                 <span class="visually-hidden">4 звезды</span>
-                <span class="card-item-star"></span>
-                <span class="card-item-star"></span>
-                <span class="card-item-star"></span>
-                <span class="card-item-star"></span>
               </p>
               <p class="card-item-rating-info">Рейтинг: 9,2</p>
             </li>
@@ -201,9 +205,6 @@
               <button class="button button-favorite" type="button">В избранное</button>
               <p class="card-item-stars stars-3">
                 <span class="visually-hidden">3 звезды</span>
-                <span class="card-item-star"></span>
-                <span class="card-item-star"></span>
-                <span class="card-item-star"></span>
               </p>
               <p class="card-item-rating-info">Рейтинг: 6,9</p>
             </li>
@@ -220,8 +221,6 @@
               <button class="button button-favorite" type="button">В избранное</button>
               <p class="card-item-stars stars-2">
                 <span class="visually-hidden">2 звезды</span>
-                <span class="card-item-star"></span>
-                <span class="card-item-star"></span>
               </p>
               <p class="card-item-rating-info">Рейтинг: 5,0</p>
             </li>
@@ -250,7 +249,7 @@
             </li>
           </ul>
         </section>
-        <section class="subscription">
+        <section class="subscription" data-test="subscribe">
           <h2 class="subscription-heading">Подпишитесь на рассылку</h2>
           <p class="subscription-desc">Только полезная информация и никакого спама, честное бойскаутское!</p>
           <form class="subscription-form" action="https://echo.htmlacademy.ru/" method="post">
@@ -264,7 +263,7 @@
         </section>
       </main>
 
-      <footer class="page-footer page-footer-inner">
+      <footer class="page-footer page-footer-inner" data-test="footer">
         <ul class="footer-social-list">
           <li class="footer-social-item">
             <a class="footer-social-link footer-social-vk" href="https://vk.com/htmlacademy">
