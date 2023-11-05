@@ -95,7 +95,7 @@ img {
 }
 
 .navigation-user {
-  width: 269px;
+  width: 268px;
 }
 
 .navigation-link {
@@ -138,9 +138,10 @@ img {
 }
 
 .navigation-item-button {
-  padding-top: 14px;
-  padding-bottom: 14px;
-  padding-left: 21px;
+  /* padding-top: 14px; */
+  /* padding-bottom: 14px; */
+  /* padding-left: 21px; */
+  margin-left: auto;
   align-self: center;
 }
 
@@ -665,17 +666,41 @@ img {
 
 .infrastructure-field-label::before {
   position: absolute;
-  top: 0;
-  left: 0;
   content: "";
-  width: 20px;
-  height: 21px;
+  top: -3px;
+  left: -3px;
+  width: 26px;
+  height: 27px;
   background-image: url("../images/svg/icons-check.svg");
   background-repeat: no-repeat;
+  background-position: center;
 }
 
 .infrastructure-field-input:checked + .infrastructure-field-label::before {
   background-image: url("../images/svg/icons-check-mark.svg");
+}
+
+.infrastructure-field:hover,
+.type-house-field:hover {
+  opacity: 0.6;
+}
+
+.infrastructure-field:focus,
+.type-house-field:focus {
+  opacity: 1;
+}
+
+.infrastructure-field-input:focus + .infrastructure-field-label::before {
+  background-image: url("../images/svg/icons-check-focus.svg");
+}
+
+.infrastructure-field-input:checked:focus + .infrastructure-field-label::before {
+  background-image: url("../images/svg/icons-check-mark-focus.svg");
+}
+
+.infrastructure-field:active,
+.type-house-field:active {
+  opacity: 0.3;
 }
 
 .type-house {
@@ -709,17 +734,34 @@ img {
 
 .type-house-field-label::before {
   position: absolute;
-  top: 0;
-  left: 0;
   content: "";
-  width: 21px;
-  height: 21px;
+  top: -3px;
+  left: -1px;
+  width: 26px;
+  height: 27px;
   background-image: url("../images/svg/icons-radio.svg");
   background-repeat: no-repeat;
+  background-position: center;
+}
+
+.type-house-field:hover {
+  opacity: 0.6;
 }
 
 .type-house-field-input:checked + .type-house-field-label::before {
   background-image: url("../images/svg/icons-radio-mark.svg");
+}
+
+.type-house-field-input:focus + .type-house-field-label::before {
+  background-image: url("../images/svg/icons-radio-focus.svg");
+}
+
+.type-house-field-input:checked:focus + .type-house-field-label::before {
+  background-image: url("../images/svg/icons-radio-mark-focus.svg");
+}
+
+.type-house-field:active {
+  opacity: 0.3;
 }
 
 .price {
@@ -840,6 +882,14 @@ img {
   background-image: url("../images/svg/icons-arrow-down.svg");
   background-repeat: no-repeat;
   background-position: right 17px center;
+}
+
+.catalog-sorting-dropdown:hover {
+  border-color: #68A2CA;
+}
+
+.catalog-sorting-dropdown:disabled {
+  opacity: 0.3;
 }
 
 .catalog-sorting-buttons {
@@ -1146,6 +1196,17 @@ img {
   background-position: right 20px top 16px;
 }
 
+.search-form-field-date::placeholder {
+  opacity: 0.6;
+  color: #000000;
+}
+
+.search-form-field-date:hover,
+.search-form-field-date:focus {
+  background-color: #e6e6e6;
+}
+
+
 .search-form-text {
   grid-column: 2 / -1;
   color: #333333;
@@ -1160,7 +1221,7 @@ img {
 }
 
 .search-form-text-alarm {
-  color: #FF5757;
+  color: #ff5757;
 }
 
 .search-form-group-button {
@@ -1185,14 +1246,29 @@ img {
   border: none;
   border-radius: 10px;
   background-color: #83b3d3;
-  color: var(--basic-white, #FFF);
+  color: #ffffff;
   text-align: center;
   font-family: PT Sans;
   font-size: 20px;
   font-style: normal;
   font-weight: 700;
-  line-height: 24px; /* 120% */
+  line-height: 24px;
   text-transform: uppercase;
+}
+
+.search-form-button-submit:hover,
+.search-form-button-submit:focus,
+.search-form-button-submit:active {
+  background-color: #68a2ca;
+}
+
+.search-form-button-submit:active {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.search-form-button-submit:disabled {
+  color: #ffffff;
+  background-color: #e5e5e5;
 }
 
 .button-min {
@@ -1277,6 +1353,24 @@ img {
   background-color: #83b3d3;
   padding: 0;
   margin: 0;
+}
+
+.tooltip-toggle:hover,
+.tooltip-toggle:focus,
+.tooltip-toggle:active {
+  background: #68A2CA;
+}
+
+.tooltip-toggle:active .tooltip-icon{
+  opacity: 0.3;
+}
+
+.tooltip-toggle:disabled {
+  background-color: #e5e5e5;
+}
+
+.tooltip-toggle:disabled .tooltip-icon{
+  opacity: 1;
 }
 
 .tooltip-text {
