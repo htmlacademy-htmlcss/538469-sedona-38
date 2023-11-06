@@ -4,7 +4,7 @@
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Седона</title>
-    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico">
     <link rel="stylesheet" href="styles/styles.css">
   </head>
 
@@ -37,14 +37,15 @@
             </li>
             <li class="navigation-item">
               <a class="navigation-link icon-favorites" href="#">
-                <span class="favorites-qty" aria-label="Избранное">12</span>
+                <span class="favorites-qty">12</span>
+                <span class="visually-hidden">Избранное</span>
                 <svg aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg" width="19" height="17" fill="none">
                   <path fill="#000" d="M9.293 17c-.3 0-.6-.1-.8-.4-5.4-6.1-6.7-7.5-7-7.9-.7-.9-1.1-2.1-1.1-3.3 0-3 2.4-5.4 5.5-5.4 1.3 0 2.5.5 3.5 1.3 1-.8 2.3-1.3 3.5-1.3 3 0 5.5 2.4 5.5 5.4 0 1.3-.5 2.5-1.3 3.4l-7 7.9c-.2.2-.4.3-.8.3Zm-6-9.5c.3.4 3.5 4 6.1 6.9l6.2-7c.5-.5.7-1.2.7-2 0-1.8-1.5-3.3-3.3-3.3-1 0-2 .5-2.7 1.3-.3.3-.6.4-.9.4-.3 0-.6-.2-.8-.4-.7-.8-1.7-1.3-2.7-1.3-1.8 0-3.3 1.5-3.3 3.3-.1.9.3 1.6.7 2.1-.1 0-.1 0 0 0Z" />
                 </svg>
               </a>
             </li>
             <li class="navigation-item navigation-item-button">
-              <a class="navigation-link button button-here" href="#">Хочу сюда!</a>
+              <a class="navigation-link button button-here button-brown" href="#">Хочу сюда!</a>
             </li>
           </ul>
         </nav>
@@ -99,19 +100,19 @@
               <p class="price-title">Стоимость, ₽:</p>
               <div class="price-wrapper">
                 <label class="price-label price-label-min" for="price-min">от</label>
-                <input class="price-input price-input-min" type="text" name="price-min" id="price-min" placeholder="0" value="0">
+                <input class="price-input price-input-min" type="number" name="price-min" id="price-min" placeholder="0" value="0">
               </div>
               <div class="price-wrapper">
                 <label class="price-label price-label-max" for="price-max">до</label>
-                <input class="price-input price-input-max" type="text" name="price-max" id="price-max" placeholder="9000" value="9000">
+                <input class="price-input price-input-max" type="number" name="price-max" id="price-max" placeholder="9000" value="9000">
               </div>
               <div class="range">
                 <div class="range-scale">
                   <div class="range-bar" style="left: 0; width: 226px">
-                    <button class="range-toggle toggle-min">
+                    <button class="range-toggle toggle-min" type="button">
                       <span class="visually-hidden">Изменить минимальную цену</span>
                     </button>
-                    <button class="range-toggle toggle-max">
+                    <button class="range-toggle toggle-max" type="button">
                       <span class="visually-hidden">Изменить максимальную цену</span>
                     </button>
                   </div>
@@ -119,10 +120,10 @@
               </div>
             </div>
             <p class="hotel-search-buttons form-buttons">
-              <button class="form-buttons-apply button" type="submit">
+              <button class="form-buttons-apply button button-blue" type="submit">
                 Применить
               </button>
-              <button class="form-buttons-reset button" type="reset">
+              <button class="form-buttons-reset button button-transparent" type="reset">
                 Сбросить
               </button>
             </p>
@@ -130,7 +131,7 @@
         </section>
         <section class="catalog-sorting" data-test="catalog">
           <h2 class="catalog-sorting-heading">Найдено гостиниц: 38</h2>
-          <select class="catalog-sorting-dropdown" name="catalog-sorting-dropdown">
+          <select class="catalog-sorting-dropdown" name="catalog-sorting-dropdown" aria-label="Сортировка">
             <option value="ascending">Сначала дешёвые</option>
             <option value="descending">Сначала дорогие</option>
             <option value="popular">Популярные</option>
@@ -165,32 +166,31 @@
               </a>
               <p class="card-item-type-house">Гостиница</p>
               <p class="card-item-price">От 4000 ₽</p>
-              <a class="button button-more" href="#">Подробнее</a>
-              <button class="button button-favorite" type="button">В избранное</button>
+              <a class="button button-more button-brown" href="#">Подробнее</a>
+              <button class="button button-favorite button-blue" type="button">В избранное</button>
               <p class="card-item-stars stars-4">
                 <span class="visually-hidden">4 звезды</span>
               </p>
               <p class="card-item-rating-info">Рейтинг: 8,5</p>
             </li>
             <li class="card-item">
-              <a href="#" class="card-item-link card-item-link-img"" tabindex="-1">
-                <img class="card-item-thumb" src="images/hotel-2.jpg" alt="Villas at Poco Diablo" width="300"
-                  height="212">
+              <a href="#" class="card-item-link card-item-link-img" tabindex="-1">
+                <img class="card-item-thumb" src="images/hotel-2.jpg" alt="Villas at Poco Diablo" width="300" height="212">
               </a>
               <a href="#" class="card-item-link" tabindex="-1">
                 <h3 class="card-item-title">Villas at Poco Diablo</h3>
               </a>
               <p class="card-item-type-house">Гостиница</p>
               <p class="card-item-price">От 5000 ₽</p>
-              <a class="button button-more" href="#">Подробнее</a>
-              <button class="button button-favorite-in" type="button">В избранном</button>
+              <a class="button button-more button-brown" href="#">Подробнее</a>
+              <button class="button button-favorite-in button-green" type="button">В избранном</button>
               <p class="card-item-stars stars-4">
                 <span class="visually-hidden">4 звезды</span>
               </p>
               <p class="card-item-rating-info">Рейтинг: 9,2</p>
             </li>
             <li class="card-item">
-              <a href="#" class="card-item-link card-item-link-img"" tabindex="-1">
+              <a href="#" class="card-item-link card-item-link-img" tabindex="-1">
                 <img class="card-item-img" src="images/hotel-3.jpg" alt="Desert Quail Inn" width="300" height="212">
               </a>
               <a href="#" class="card-item-link" tabindex="-1">
@@ -198,15 +198,15 @@
               </a>
               <p class="card-item-type-house">Гостиница</p>
               <p class="card-item-price">От 2500 ₽</p>
-              <a class="button button-more" href="#">Подробнее</a>
-              <button class="button button-favorite" type="button">В избранное</button>
+              <a class="button button-more button-brown" href="#">Подробнее</a>
+              <button class="button button-favorite button-blue" type="button">В избранное</button>
               <p class="card-item-stars stars-3">
                 <span class="visually-hidden">3 звезды</span>
               </p>
               <p class="card-item-rating-info">Рейтинг: 6,9</p>
             </li>
             <li class="card-item">
-              <a href="#" class="card-item-link card-item-link-img"" tabindex="-1">
+              <a href="#" class="card-item-link card-item-link-img" tabindex="-1">
                 <img class="card-item-img" src="images/hotel-4.jpg" alt="GreenTree Inn" width="300" height="212">
               </a>
               <a href="#" class="card-item-link" tabindex="-1">
@@ -214,8 +214,8 @@
               </a>
               <p class="card-item-type-house">Гостиница</p>
               <p class="card-item-price">От 1500 ₽</p>
-              <a class="button button-more" href="#">Подробнее</a>
-              <button class="button button-favorite" type="button">В избранное</button>
+              <a class="button button-more button-brown" href="#">Подробнее</a>
+              <button class="button button-favorite button-blue" type="button">В избранное</button>
               <p class="card-item-stars stars-2">
                 <span class="visually-hidden">2 звезды</span>
               </p>
@@ -255,7 +255,7 @@
             </label>
             <input class="subscription-form-field" name="email" type="email" placeholder="Ваш e-mail"
               id="subscription-form-email-field" required>
-            <button class="subscription-form-button button" type="submit">Подписаться</button>
+            <button class="subscription-form-button button button-blue" type="submit">Подписаться</button>
           </form>
         </section>
       </main>
