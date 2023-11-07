@@ -380,8 +380,9 @@ img {
   content: "";
   width: 60px;
   height: 2px;
-  top: 85px;
-  left: 85px;
+  bottom: -31px;
+  left: 50%;
+  transform: translateX(-50%);
   background-color: rgba(0, 0, 0, 0.3);
 }
 
