@@ -109,9 +109,8 @@
         </section>
         <section class="find-hotel" data-test="search">
           <h2 class="find-hotel-heading">Заинтересовались?</h2>
-          <p class="find-hotel-desc">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения
-            гостиниц в Седоне</p>
-          <a href="#" class="find-hotel-link button button-brown">Поиск гостиницы в Седоне</a>
+          <p class="find-hotel-desc">Укажите предполагаемые даты поездки,<br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <a class="find-hotel-link button button-brown" href="#">Поиск гостиницы в Седоне</a>
         </section>
         <section class="subscription">
           <h2 class="subscription-heading">Подпишитесь на рассылку</h2>
@@ -120,8 +119,7 @@
             <label class="visually-hidden" for="subscription-form-email-field">
               E-mail
             </label>
-            <input class="subscription-form-field" name="email" type="email" placeholder="Ваш e-mail"
-              id="subscription-form-email-field" required>
+            <input class="subscription-form-field" name="email" type="email" placeholder="Ваш e-mail" id="subscription-form-email-field" required>
             <button class="subscription-form-button button button-blue" type="submit">Подписаться</button>
           </form>
         </section>
@@ -194,9 +192,9 @@
             Взрослые:
           </label>
           <div class="search-form-group-button">
-            <button class="search-form-button button-min" type="button"></button>
+            <button class="search-form-button button-min" type="button" aria-label="Уменьшить количество взрослых"></button>
             <input class="search-form-field search-form-field-number" name="quantity-adults" id="search-form-adults" type="number" value="2" min="0" max="9">
-            <button class="search-form-button button-max" type="button"></button>
+            <button class="search-form-button button-max" type="button" aria-label="Увеличить количество взрослых"></button>
           </div>
           <span class="search-form-label">
             <label class="search-form-title search-form-children" for="search-form-children">
@@ -212,10 +210,9 @@
             </span>
           </span>
           <div class="search-form-group-button">
-            <button class="search-form-button button-min" type="button"></button>
-            <input class="search-form-field search-form-field-number" name="quantity-children" id="search-form-children"
-              type="number" value="2" min="0" max="9">
-            <button class="search-form-button button-max" type="button"></button>
+            <button class="search-form-button button-min" type="button" aria-label="Уменьшить количество детей"></button>
+            <input class="search-form-field search-form-field-number" name="quantity-children" id="search-form-children" type="number" value="2" min="0" max="9">
+            <button class="search-form-button button-max" type="button" aria-label="Увеличить количество детей"></button>
           </div>
           <button class="search-form-button-submit" type="submit">
             Найти
